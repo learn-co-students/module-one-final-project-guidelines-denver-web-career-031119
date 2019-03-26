@@ -14,7 +14,7 @@ ogden_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery
 
 summit_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/venues.json?id=KovZpZAFFt1A&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
-Marquis_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/venues.json?id=KovZpZAJeFkA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
+marquis_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/venues.json?id=KovZpZAJeFkA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
 def build_ven_data(parsed)
   venue_hash = {}
@@ -28,24 +28,19 @@ def build_ven_data(parsed)
   venue_hash
 end
 
-binding.pry
-
-
 #start even hash
 
 red_rocks_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAaeIvA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
 fillmore_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAE6eJA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
-red_rocks_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAaeIvA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
+cervantes_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAalekA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
-red_rocks_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAaeIvA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
+ogden_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAJv67A&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
-red_rocks_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAaeIvA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
+summit_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAaeIvA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
-red_rocks_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAaeIvA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
-
-red_rocks_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAaeIvA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
+marquis_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAJeFkA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
 def build_event_data(parsed)
   event_hash = {}
