@@ -1,36 +1,8 @@
-# require 'rest-client'
-# require 'pry'
-# require 'require_all'
+## if any user information is entered, the following commands will destroy EVERYTHING
 
-
-# require 'JSON'
-#
-# #creating venue hash
-#
-# red_rocks_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/venues.json?id=KovZpZAaeIvA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
-#
-# fillmore_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/venues.json?id=KovZpZAE6eJA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
-#
-# cervantes_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/venues.json?id=KovZpZAalekA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
-#
-# ogden_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/venues.json?id=KovZpZAJv67A&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
-#
-# summit_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/venues.json?id=KovZpZAFFt1A&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
-#
-# marquis_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/venues.json?id=KovZpZAJeFkA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
-#
-# def build_ven_data(parsed)
-#   venue_hash = {}
-#   venue_hash["name"] = parsed["_embedded"]["venues"][0]["name"]
-#   venue_hash["city"] = parsed["_embedded"]["venues"][0]["city"]["name"]
-#   venue_hash["state"] = parsed["_embedded"]["venues"][0]["state"]["stateCode"]
-#   venue_hash["address"] = parsed["_embedded"]["venues"][0]["address"]["line1"]
-#   venue_hash["country"] = parsed["_embedded"]["venues"][0]["country"]["countryCode"]
-#   venue_hash["parkingDetail"] = parsed["_embedded"]["venues"][0]["parkingDetail"]
-#   venue_hash["boxOfficeInfo"] = parsed["_embedded"]["venues"][0]["boxOfficeInfo"]
-#   venue_hash
-# end
-
+Venue.destroy_all
+Event.destroy_all
+Attraction.destroy_all
 
 
 ## SQL injection (name, location, parking_details), (?, ?, ?)
@@ -86,10 +58,10 @@ the_national_parks = Attraction.create(artist: "The National Parks", genre: "Oth
 #   t.references :venue
 
 ## red rocks
-snoop_dogg_e1 = Event.create(name: 'Snoop', date: 'April 18 2019', price: 144, popularity: 0, attraction: snoop_dog, venue: red_rocks)
+snoop_dogg_e1 = Event.create(name: 'Snoop', date: 'April 18 2019', price: 144, popularity: 0, attraction: snoop_dogg, venue: red_rocks)
 luke_combs_e1 = Event.create(name: 'Luke Combs with LANco', date: 'May 12 2019', price: 307, popularity: 0, attraction: luke_combs, venue: red_rocks)
 lauren_daigle_e1 = Event.create(name: 'Lauren Daigle', date: 'September 29 2019', price: 81, popularity: 0, attraction: lauren_daigle, venue: red_rocks)
-snoop_dogg_e2 = Event.create(name: 'Snoopy D', date: 'July 06 2019', price: 127, popularity: 0, attraction: snoop_dog, venue: red_rocks)
+snoop_dogg_e2 = Event.create(name: 'Snoopy D', date: 'July 06 2019', price: 127, popularity: 0, attraction: snoop_dogg, venue: red_rocks)
 luke_combs_e2 = Event.create(name: 'Luke Combs with TCP/IP', date: 'October 19 2019', price: 213, popularity: 0, attraction: luke_combs, venue: red_rocks)
 lauren_daigle_e2 = Event.create(name: 'Lauren Daigle', date: 'July 27 2019', price: 45, popularity: 0, attraction: lauren_daigle, venue: red_rocks)
 
