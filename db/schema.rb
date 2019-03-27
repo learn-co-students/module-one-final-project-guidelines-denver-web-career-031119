@@ -10,12 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190326161703) do
+ActiveRecord::Schema.define(version: 2019_03_26_162100) do
 
   create_table "attractions", force: :cascade do |t|
     t.text "artist"
     t.text "genre"
     t.text "sub_genre"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.text "name"
+    t.text "date"
+    t.integer "price"
+    t.integer "popularity"
+    t.integer "attraction_id"
+    t.integer "venue_id"
+    t.index ["attraction_id"], name: "index_events_on_attraction_id"
+    t.index ["venue_id"], name: "index_events_on_venue_id"
   end
 
   create_table "venues", force: :cascade do |t|
