@@ -51,17 +51,17 @@ marquis = Venue.create(name: "Marquis Theatre", location: '2009 Larimer St, Denv
 ## Seed database with Attraction data
 
 #red rocks
-snoop_dog = Attraction.create(artist: "Snoop Dogg", genre: "Hip-Hop/Rap", sub_genre: "Urban")
+snoop_dogg = Attraction.create(artist: "Snoop Dogg", genre: "Hip-Hop/Rap", sub_genre: "Urban")
 luke_combs = Attraction.create(artist: "Luke Combs", genre: "Country", sub_genre: "Country")
 lauren_daigle = Attraction.create(artist: "Lauren Daigle", genre: "Religious", sub_genre: "Gospel")
 #fillmore
 lil_baby = Attraction.create(artist: "Lil Baby", genre: "Hip-Hop/Rap", sub_genre: "Hip-Hop/Rap")
-brett_yound = Attraction.create(artist: "Brett Young", genre: "Folk", sub_genre: "Folk")
+brett_young = Attraction.create(artist: "Brett Young", genre: "Folk", sub_genre: "Folk")
 #cervantes
 dababy = Attraction.create(artist: "DaBaby", genre: "Hip-Hop/Rap", sub_genre: "Urban")
 earl_sweatshirt = Attraction.create(artist: "Earl Sweatshirt", genre: "Hip-Hop/Rap", sub_genre: "Urban")
  #ogden
-maggie_rodgers = Attraction.create(artist: "Maggie Rogers", genre: "Pop", sub_genre: "Synth Pop")
+maggie_rogers = Attraction.create(artist: "Maggie Rogers", genre: "Pop", sub_genre: "Synth Pop")
 empire_of_the_sun = Attraction.create(artist: "Empire of the Sun", genre: "Rock", sub_genre: "Pop")
 #summit
 gunna = Attraction.create(artist: "Gunna", genre: "Hip-Hop/Rap", sub_genre: "Hip-Hop/Rap")
@@ -69,3 +69,46 @@ taking_back_sunday = Attraction.create(artist: "Taking Back Sunday", genre: "Roc
 #marquis
 lil_tracy = Attraction.create(artist: "Lil Tracy", genre: "Hip-Hop/Rap", sub_genre: "Hip-Hop/Rap")
 the_national_parks = Attraction.create(artist: "The National Parks", genre: "Other", sub_genre: "Other")
+
+## Seed database with Event data
+
+# create_table :events do |t|
+#   t.text :name
+#   t.text :date
+#   t.integer :price
+#   t.integer :popularity
+#   t.references :attraction
+#   t.references :venue
+
+## red rocks
+snoop_dogg_e1 = Event.create(name: 'Snoop', date: 'April 18 2019', price: 144, popularity: 0, attraction: snoop_dog, venue: red_rocks)
+luke_combs_e1 = Event.create(name: 'Luke Combs with LANco', date: 'May 12 2019', price: 307, popularity: 0, attraction: luke_combs, venue: red_rocks)
+lauren_daigle_e1 = Event.create(name: 'Lauren Daigle', date: 'September 29 2019', price: 81, popularity: 0, attraction: lauren_daigle, venue: red_rocks)
+snoop_dogg_e2 = Event.create(name: 'Snoopy D', date: 'July 06 2019', price: 127, popularity: 0, attraction: snoop_dog, venue: red_rocks)
+luke_combs_e2 = Event.create(name: 'Luke Combs with TCP/IP', date: 'October 19 2019', price: 213, popularity: 0, attraction: luke_combs, venue: red_rocks)
+lauren_daigle_e2 = Event.create(name: 'Lauren Daigle', date: 'July 27 2019', price: 45, popularity: 0, attraction: lauren_daigle, venue: red_rocks)
+
+##fillmore
+lil_baby_e1 = Event.create(name: 'Lil Baby - The New Generation Tour', date: 'March 25 2019', price: 69, popularity: 0, attraction: lil_baby, venue: fillmore)
+brett_young_e1 = Event.create(name: 'Brett Young', date: 'April 20 2019', price: 120, popularity: 0, attraction: brett_young, venue: fillmore)
+
+##cervantes
+dababy_e1 = Event.create(name: 'DaBaby', date: 'April 17 2019', price: 53, popularity: 0, attraction: dababy, venue: cervantes)
+earl_sweatshirt_e1 = Event.create(name: 'Earl Sweatshirt', date: 'April 11 2019', price: 49, popularity: 0, attraction: earl_sweatshirt, venue: cervantes)
+
+##ogden
+maggie_rogers_e1 = Event.create(name: 'Maggie Rogers', date: 'April 09 2019', price: 110, popularity: 0, attraction: maggie_rogers, venue: ogden)
+maggie_rogers_e2 = Event.create(name: 'Maggie Rogers', date: 'April 10 2019', price: 119, popularity: 0, attraction: maggie_rogers, venue: ogden)
+empire_of_the_sun_e1 = Event.create(name: 'Empire of the Sun', date: 'June 15 2019', price: 61, popularity: 0, attraction: empire_of_the_sun, venue: ogden)
+empire_of_the_sun_e2 = Event.create(name: 'Empire of the Sun', date: 'June 16 2019', price: 53, popularity: 0, attraction: empire_of_the_sun, venue: ogden)
+
+##summit
+gunna_e1 = Event.create(name: 'Gunna', date: 'April 14 2019', price: 30, popularity: 0, attraction: gunna, venue: summit)
+taking_back_sunday_e1 = Event.create(name: 'Taking Back Sunday', date: 'May 01 2019', price: 35, popularity: 0, attraction: taking_back_sunday, venue: summit)
+
+##marquis
+lil_tracy_e1 = Event.create(name: 'Lil Tracy', date: 'April 07 2019', price: 15, popularity: 0, attraction: lil_tracy, venue: marquis)
+the_national_parks_e1 = Event.create(name: 'The National Parks', date: 'April 19 2019', price: 15, popularity: 0, attraction: the_national_parks, venue: marquis)
+
+# binding.pry
+# 1
