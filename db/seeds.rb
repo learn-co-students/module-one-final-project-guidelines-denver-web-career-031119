@@ -54,40 +54,40 @@ the_national_parks = Attraction.create(artist: "The National Parks", genre: "Oth
 #   t.references :venue
 
 ## red rocks
-snoop_dogg_e1 = Event.create(name: 'Snoop', date: 'April 18 2019', price: 144, popularity: 0, attraction: snoop_dogg, venue: red_rocks)
-luke_combs_e1 = Event.create(name: 'Luke Combs with LANco', date: 'May 12 2019', price: 307, popularity: 0, attraction: luke_combs, venue: red_rocks)
-lauren_daigle_e1 = Event.create(name: 'Lauren Daigle', date: 'September 29 2019', price: 81, popularity: 0, attraction: lauren_daigle, venue: red_rocks)
-snoop_dogg_e2 = Event.create(name: 'Snoopy D', date: 'July 06 2019', price: 127, popularity: 0, attraction: snoop_dogg, venue: red_rocks)
-luke_combs_e2 = Event.create(name: 'Luke Combs with TCP/IP', date: 'October 19 2019', price: 213, popularity: 0, attraction: luke_combs, venue: red_rocks)
-lauren_daigle_e2 = Event.create(name: 'Lauren Daigle', date: 'July 27 2019', price: 45, popularity: 0, attraction: lauren_daigle, venue: red_rocks)
-snoop_dogg_e3 = Event.create(name: 'Snoop on the Rocks', date: 'May 01 2019', price: 138, popularity: 0, attraction: snoop_dogg, venue: red_rocks)
+snoop_dogg_e1 = Event.create(name: 'Snoop', date: '18th Apr 2019', price: 144, popularity: 0, attraction: snoop_dogg, venue: red_rocks)
+luke_combs_e1 = Event.create(name: 'Luke Combs with LANco', date: '12th May 2019', price: 307, popularity: 0, attraction: luke_combs, venue: red_rocks)
+lauren_daigle_e1 = Event.create(name: 'Lauren Daigle', date: '29th Sep 2019', price: 81, popularity: 0, attraction: lauren_daigle, venue: red_rocks)
+snoop_dogg_e2 = Event.create(name: 'Snoopy D', date: '6th Jul 2019', price: 127, popularity: 0, attraction: snoop_dogg, venue: red_rocks)
+luke_combs_e2 = Event.create(name: 'Luke Combs with TCP/IP', date: '19th Oct 2019', price: 213, popularity: 0, attraction: luke_combs, venue: red_rocks)
+lauren_daigle_e2 = Event.create(name: 'Lauren Daigle', date: '27th Jul 2019', price: 45, popularity: 0, attraction: lauren_daigle, venue: red_rocks)
+snoop_dogg_e3 = Event.create(name: 'Snoop on the Rocks', date: '1st May 2019', price: 138, popularity: 0, attraction: snoop_dogg, venue: red_rocks)
 
 ##fillmore
-lil_baby_e1 = Event.create(name: 'Lil Baby - The New Generation Tour', date: 'March 25 2019', price: 69, popularity: 0, attraction: lil_baby, venue: fillmore)
-brett_young_e1 = Event.create(name: 'Brett Young', date: 'April 20 2019', price: 120, popularity: 0, attraction: brett_young, venue: fillmore)
-lil_baby_e2 = Event.create(name: 'Lil Baby - The Next Generation Tour', date: 'May 01 2019', price: 48, popularity: 0, attraction: lil_baby, venue: fillmore)
-brett_young_e2 = Event.create(name: 'Brett Younger', date: 'May 01 2019', price: 117, popularity: 0, attraction: brett_young, venue: fillmore)
+lil_baby_e1 = Event.create(name: 'Lil Baby - The New Generation Tour', date: '25th Mar 2019', price: 69, popularity: 0, attraction: lil_baby, venue: fillmore)
+brett_young_e1 = Event.create(name: 'Brett Young', date: '20th Apr 2019', price: 120, popularity: 0, attraction: brett_young, venue: fillmore)
+lil_baby_e2 = Event.create(name: 'Lil Baby - The Next Generation Tour', date: '1st May 2019', price: 48, popularity: 0, attraction: lil_baby, venue: fillmore)
+brett_young_e2 = Event.create(name: 'Brett Younger', date: '1st May 2019', price: 117, popularity: 0, attraction: brett_young, venue: fillmore)
 
 ##cervantes
-dababy_e1 = Event.create(name: 'DaBaby', date: 'April 17 2019', price: 53, popularity: 0, attraction: dababy, venue: cervantes)
-earl_sweatshirt_e1 = Event.create(name: 'Earl Sweatshirt', date: 'April 11 2019', price: 49, popularity: 0, attraction: earl_sweatshirt, venue: cervantes)
-earl_sweatshirt_e2 = Event.create(name: 'Earl Sweatshirt - Cool Breeze', date: 'May 01 2019', price: 49, popularity: 0, attraction: earl_sweatshirt, venue: cervantes)
+dababy_e1 = Event.create(name: 'DaBaby', date: '17th Apr 2019', price: 53, popularity: 0, attraction: dababy, venue: cervantes)
+earl_sweatshirt_e1 = Event.create(name: 'Earl Sweatshirt', date: '11th Apr 2019', price: 49, popularity: 0, attraction: earl_sweatshirt, venue: cervantes)
+earl_sweatshirt_e2 = Event.create(name: 'Earl Sweatshirt - Cool Breeze', date: '1st May 2019', price: 49, popularity: 0, attraction: earl_sweatshirt, venue: cervantes)
 
 ##ogden
-maggie_rogers_e1 = Event.create(name: 'Maggie Rogers', date: 'April 09 2019', price: 110, popularity: 0, attraction: maggie_rogers, venue: ogden)
-maggie_rogers_e2 = Event.create(name: 'Maggie Rogers', date: 'April 10 2019', price: 119, popularity: 0, attraction: maggie_rogers, venue: ogden)
-empire_of_the_sun_e1 = Event.create(name: 'Empire of the Sun', date: 'June 15 2019', price: 61, popularity: 0, attraction: empire_of_the_sun, venue: ogden)
-empire_of_the_sun_e2 = Event.create(name: 'Empire of the Sun', date: 'June 16 2019', price: 53, popularity: 0, attraction: empire_of_the_sun, venue: ogden)
-empire_of_the_sun_e3 = Event.create(name: 'Empire of the Sun', date: 'May 01 2019', price: 53, popularity: 0, attraction: empire_of_the_sun, venue: ogden)
+maggie_rogers_e1 = Event.create(name: 'Maggie Rogers', date: '9th Apr 2019', price: 110, popularity: 0, attraction: maggie_rogers, venue: ogden)
+maggie_rogers_e2 = Event.create(name: 'Maggie Rogers', date: '10th Apr 2019', price: 119, popularity: 0, attraction: maggie_rogers, venue: ogden)
+empire_of_the_sun_e1 = Event.create(name: 'Empire of the Sun', date: '15th Jun 2019', price: 61, popularity: 0, attraction: empire_of_the_sun, venue: ogden)
+empire_of_the_sun_e2 = Event.create(name: 'Empire of the Sun', date: '16th Jun 2019', price: 53, popularity: 0, attraction: empire_of_the_sun, venue: ogden)
+empire_of_the_sun_e3 = Event.create(name: 'Empire of the Sun', date: '1st May 2019', price: 53, popularity: 0, attraction: empire_of_the_sun, venue: ogden)
 
 ##summit
-gunna_e1 = Event.create(name: 'Gunna', date: 'April 14 2019', price: 30, popularity: 0, attraction: gunna, venue: summit)
-taking_back_sunday_e1 = Event.create(name: 'Taking Back Sunday', date: 'May 01 2019', price: 35, popularity: 0, attraction: taking_back_sunday, venue: summit)
+gunna_e1 = Event.create(name: 'Gunna', date: '14th Apr 2019', price: 30, popularity: 0, attraction: gunna, venue: summit)
+taking_back_sunday_e1 = Event.create(name: 'Taking Back Sunday', date: '1st May 2019', price: 35, popularity: 0, attraction: taking_back_sunday, venue: summit)
 
 ##marquis
-lil_tracy_e1 = Event.create(name: 'Lil Tracy', date: 'April 07 2019', price: 15, popularity: 0, attraction: lil_tracy, venue: marquis)
-the_national_parks_e1 = Event.create(name: 'The National Parks', date: 'April 19 2019', price: 15, popularity: 0, attraction: the_national_parks, venue: marquis)
-the_national_parks_e2 = Event.create(name: 'The National Parks - Forest Service', date: 'May 01 2019', price: 15, popularity: 0, attraction: the_national_parks, venue: marquis)
+lil_tracy_e1 = Event.create(name: 'Lil Tracy', date: '7th Apr 2019', price: 15, popularity: 0, attraction: lil_tracy, venue: marquis)
+the_national_parks_e1 = Event.create(name: 'The National Parks', date: '19th Apr 2019', price: 15, popularity: 0, attraction: the_national_parks, venue: marquis)
+the_national_parks_e2 = Event.create(name: 'The National Parks - Forest Service', date: '1st May 2019', price: 15, popularity: 0, attraction: the_national_parks, venue: marquis)
 
 # binding.pry
 # 1
