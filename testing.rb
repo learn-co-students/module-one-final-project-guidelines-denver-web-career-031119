@@ -38,7 +38,7 @@ cervantes_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.co
 
 ogden_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAJv67A&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
-summit_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAaeIvA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
+summit_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAFFt1A&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
 marquis_events_parsed = JSON.parse(RestClient.get('https://app.ticketmaster.com/discovery/v2/events.json?venueId=KovZpZAJeFkA&apikey=B8VjgGQLclytABJxaAOWtTQhG7LebO8l'))
 
@@ -53,4 +53,12 @@ def build_event_data(parsed)
   event_hash
 end
 
-# binding.pry
+puts build_event_data(cervantes_events_parsed)
+puts build_event_data(ogden_events_parsed)
+puts build_event_data(summit_events_parsed)
+puts build_event_data(marquis_events_parsed)
+
+
+
+
+ # binding.pry
