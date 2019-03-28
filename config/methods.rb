@@ -120,7 +120,7 @@ end
 def large_events
   #generate all of the shows where the price is > XX% of the average of all events
   large_event = Event.all.select do |event|
-    event.price > average_ticket_price * 0.5
+    event.price > average_ticket_price * 1.25
   end
   bump_popularity(large_event, 1)
   if large_event.count == 0
@@ -164,6 +164,7 @@ end
 
 def trending_event
   events = Event.all.order(:popularity).reverse[0..2]
+  bump_popularity(events, 0.5)
   print_events(events, 4)
 end
 binding.pry
