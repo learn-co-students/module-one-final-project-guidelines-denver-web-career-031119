@@ -39,7 +39,12 @@ end
 
 def who_is_playing(date)
   events = Event.all.select { |event| event.date == date }
-  print_events(events)
+  if events.length > 0
+    print_events(events)
+  else
+    puts "We're sorry, there are no shows on this date."
+    try_again(1)
+  end
 end
 
 def average_ticket_price
@@ -98,5 +103,5 @@ def trending_event(date)
   #returns information related to the most popular event by date
 end
 
-binding.pry
+# binding.pry
 # 1

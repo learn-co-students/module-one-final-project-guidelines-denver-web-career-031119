@@ -13,3 +13,7 @@ gem "sinatra", "~> 2.0"
 gem "sinatra-activerecord", "~> 2.0"
 
 gem "pry", "~> 0.12.2"
+
+gem "rainbow", "~> 3.0"
+
+gem "color", "~> 1.8"
