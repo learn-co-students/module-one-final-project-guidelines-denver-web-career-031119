@@ -18,6 +18,7 @@ def main_menu
   puts "6 - Get more information about a particular venue."
   puts "7 - See all shows that fit your budget."
   puts "8 - See upcoming shows for a specific artist."
+  puts "9 - See what events are trending."
   puts "10 - Exit the app."
   date_entered = gets.chomp
   case date_entered
@@ -37,6 +38,8 @@ def main_menu
     shows_under_budget
   when "8"
     shows_by_artist
+  when "9"
+    trending_events 
   when "10"
     puts "Have a great day!"
     exit
@@ -185,6 +188,12 @@ def shows_by_artist
   artist_name = gets.chomp
   shows_by_attraction(artist_name)
   try_again(5)
+end
+
+def trending_events
+  puts "The following three events are trending now!"
+  trending_event
+  main_menu
 end
 
 main_menu

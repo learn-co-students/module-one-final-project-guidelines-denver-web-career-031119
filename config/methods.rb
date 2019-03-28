@@ -16,7 +16,8 @@ def build_genre_hash(events)
 end
 # binding.pry
 
-def print_events (events, int)
+def print_events (event, int)
+  events = event.sort_by{|event| Date.parse(event.date)}
   attractions = events.map(&:attraction).map(&:artist)
   venues = events.map(&:venue).map(&:name)
   price = events.map(&:price)
@@ -161,8 +162,9 @@ def shows_by_attraction(artist_name)
   print_events(events, 4)
 end
 
-def trending_event(date)
-  #returns information related to the most popular event by date
+def trending_event
+  events = Event.all.order(:popularity).reverse[0..2]
+  print_events(events, 4)
 end
 binding.pry
 # binding.pry
