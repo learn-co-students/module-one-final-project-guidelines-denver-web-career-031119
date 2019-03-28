@@ -6,15 +6,7 @@ Attraction.destroy_all
 ## SQL injection (name, location, parking_details), (?, ?, ?)
 ## Seed database with Venue data
 
-red_rocks = Venue.create(name: "Red Rocks Amphitheatre", location: '18300 W. Alameda Parkway, Morrison, CO', parking_details: "Parking is available on site. Price
-  is included in the price of your ticket. Parking lots usually open 1/2 hour prior to door time. Come early to avoid traffic hassles and to get the best parking
-  and best access to seating. Selected shows will have parking open earlier than the standard. Patrons are asked to follow directions of parking personnel
-  and park as close as possible to other cars. **NOTE** NO OVERNIGHT CAMPING PERMITTED!! NOTE: Do not park on the Highway, at entrances to the Park,
-  on private property, Alameda Parkway, or in the town of Morrison. Each of these areas is patrolled and you will be towed. Handicapped parking:
-  Designated accessible parking for persons with disabilities is in two locations. Please check your tickets for the locations of your seats before
-  parking. For access to the top of the amphitheatre, Row 70, parking is available in the Top Circle Lot. For access to the front row, Row 1, the parking is
-  at the Upper South Lot. A valid, appropriate handicap placard or license plate is required to park in a space identified as reserved for persons with
-  disabilities. All park entrances can access all parking lots.")
+red_rocks = Venue.create(name: "Red Rocks Amphitheatre", location: '18300 W. Alameda Parkway, Morrison, CO', parking_details: "Parking is available on site. Price is included in the price of your ticket. Parking lots usually open 1/2 hour prior to door time. Come early to avoid traffic hassles and to get the best parking and best access to seating. Selected shows will have parking open earlier than the standard. Patrons are asked to follow directions of parking personnel and park as close as possible to other cars. **NOTE** NO OVERNIGHT CAMPING PERMITTED!! NOTE: Do not park on the Highway, at entrances to the Park, on private property, Alameda Parkway, or in the town of Morrison. Each of these areas is patrolled and you will be towed. Handicapped parking: Designated accessible parking for persons with disabilities is in two locations. Please check your tickets for the locations of your seats before parking. For access to the top of the amphitheatre, Row 70, parking is available in the Top Circle Lot. For access to the front row, Row 1, the parking is at the Upper South Lot. A valid, appropriate handicap placard or license plate is required to park in a space identified as reserved for persons with disabilities. All park entrances can access all parking lots.")
 fillmore = Venue.create(name: "Fillmore Auditorium (Denver)", location: '1510 Clarkson, Denver, CO', parking_details: "Street parking & paid lots. Arrive Early. Paid lots not affiliated with Fillmore.")
 cervantes = Venue.create(name: "Cervantes", location: '2637 Welton Street, Denver, CO', parking_details: nil)
 ogden = Venue.create(name: "Ogden Theatre", location: '935 E. Colfax, Denver, CO', parking_details: "All parking for the Ogden Theatre is street parking. Please be aware of any residential parking areas that require a permit.")

@@ -17,3 +17,5 @@ gem "pry", "~> 0.12.2"
 gem "rainbow", "~> 3.0"
 
 gem "color", "~> 1.8"
+
+gem "colored", "~> 1.2"
