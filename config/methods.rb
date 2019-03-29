@@ -11,10 +11,8 @@ def build_genre_hash(events)
       attraction.genre == genre
     end
   end
-  # binding.pry
   genres
 end
-# binding.pry
 
 def print_events (event, int)
   events = event.sort_by{|event| Date.parse(event.date)}
@@ -46,7 +44,6 @@ def print_events (event, int)
   end
 end
 
-# binding.pry
 def bump_popularity(events, amount)
   events.map{|event| event.update(popularity: event.popularity + amount)}
 end
@@ -94,7 +91,6 @@ def average_ticket_price
 end
 
 def small_events
-  #generate all of the shows where the price is < 50% of the average of all events
   small_event = Event.all.select do |event|
     event.price < average_ticket_price * 0.5
   end
@@ -118,7 +114,6 @@ def tiny_attractions
 end
 
 def large_events
-  #generate all of the shows where the price is > XX% of the average of all events
   large_event = Event.all.select do |event|
     event.price > average_ticket_price * 1.25
   end
@@ -152,14 +147,22 @@ end
 
 def shows_by_budget(price)
   events = Event.all.select { |event| event.price <= price}
-  print_events(events, 4)
-  bump_popularity(events, 1)
+  if events.length > 0
+    print_events(events, 4)
+    bump_popularity(events, 1)
+  else
+    puts "We're sorry, there are no shows that fit your budget."
+  end
 end
 
 def shows_by_attraction(artist_name)
   events = Event.all.select{|event| event.attraction.artist == artist_name}
-  bump_popularity(events, 2)
-  print_events(events, 4)
+  if events.length > 0
+    bump_popularity(events, 2)
+    print_events(events, 4)
+  else
+    puts "We're sorry, #{artist_name} does not have any upcoming shows."
+  end
 end
 
 def trending_event
@@ -167,6 +170,3 @@ def trending_event
   bump_popularity(events, 0.5)
   print_events(events, 4)
 end
-binding.pry
-# binding.pry
-# 1
